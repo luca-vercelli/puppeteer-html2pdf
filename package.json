@@ -1,0 +1,20 @@
+{
+  "name": "puppeteer-html2pdf",
+  "version": "1.0.0",
+  "description": "CLI tool that converts HTML into PDF using nodejs+Puppeteer library",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "html2pdf": "./bin/html2pdf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^13.1.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "puppeteer": "^24.2.1"
+  }
+}
