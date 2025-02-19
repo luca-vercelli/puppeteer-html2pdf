@@ -8,6 +8,7 @@ The goal of this project is to render HTML+CSS reports into PDF using well-maint
 * You need nodejs [2] installed.
 * NodeJS version is worth! Currently this project ships Puppeteer 24.x, and is tested with NodeJS 22.x.
 * You can read both a local file and a remote file.
+* **There is some issue printing headers and footers...**
 
 ## Install from source
 
