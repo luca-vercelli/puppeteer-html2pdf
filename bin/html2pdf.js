@@ -14,6 +14,7 @@ program
   .argument("<input>", "Local HTML file or URL to convert")
   .option("-o, --output <outputFile>", "Output PDF file name", "output.pdf")
   .action(async (input, options) => {
+    let browser;
     try {
       let isURL = input.startsWith("http://") || input.startsWith("https://");
 
@@ -24,7 +25,7 @@ program
       }
 
       // Launch Puppeteer
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
       const page = await browser.newPage();
 	  
       if (isURL) {
@@ -48,6 +49,7 @@ program
     } finally {
       // Close Puppeteer
       await browser.close();
+	}
   });
 
 program.parse(process.argv);
