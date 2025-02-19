@@ -7,7 +7,7 @@ The goal of this project is to render HTML+CSS reports into PDF using well-maint
 * The Javascript library Puppeteer [1] is a wrapper around Chrome.
 * You need nodejs [2] installed.
 * NodeJS version is worth! Currently this project ships Puppeteer 24.x, and is tested with NodeJS 22.x.
-* You can read both a local file and a remote file, the latter is easier because Chromium cannot access links to other local files (e.g. CSS stylesheets).
+* You can read both a local file and a remote file.
 
 ## Install from source
 
