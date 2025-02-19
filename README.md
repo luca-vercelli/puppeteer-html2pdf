@@ -21,10 +21,6 @@ The goal of this project is to render HTML+CSS reports into PDF using well-maint
 
     npm install --global https://github.com/luca-vercelli/puppeteer-html2pdf.git
 
-## Install from npm registry
-
-TODO. This package is not on npm registry yet.
-
 ## Usage examples
 
     html2pdf https://en.wikipedia.org/wiki/Ordinary_differential_equation
