@@ -10,7 +10,7 @@ const program = new Command();
 program
   .name("html2pdf")
   .description("Converts an HTML file or a web page into a PDF using Puppeteer")
-  .version("1.1.0")
+  .version("1.0.0")
   .argument("<input>", "Local HTML file or URL to convert")
   .option("-o, --output <outputFile>", "Output PDF file name", "output.pdf")
   .action(async (input, options) => {
@@ -26,8 +26,6 @@ program
       // Launch Puppeteer
       const browser = await puppeteer.launch();
       const page = await browser.newPage();
-
-	  console.log(`RIGA 0`);
 	  
       if (isURL) {
         // Load a web page from a URL
@@ -39,19 +37,17 @@ program
         await page.goto(fileUrl, { waitUntil: "networkidle2" });
       }
 
-	  console.log(`RIGA 1`);
       // Generate the PDF
       const outputPath = path.resolve(options.output);
-	  console.log(`RIGA 2`);
       await page.pdf({ path: outputPath, format: "A4", printBackground: true });
 
-	  console.log(`RIGA 3`);
-      // Close Puppeteer
-      await browser.close();
       console.log(`✅ PDF successfully created: ${outputPath}`);
+
     } catch (error) {
       console.error("❌ Error during conversion:", error);
-    }
+    } finally {
+      // Close Puppeteer
+      await browser.close();
   });
 
 program.parse(process.argv);
