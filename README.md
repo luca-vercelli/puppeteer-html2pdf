@@ -9,6 +9,7 @@ The goal of this project is to render HTML+CSS reports into PDF using well-maint
 * NodeJS version is worth! Currently this project ships Puppeteer 24.x, and is tested with NodeJS 22.x.
 * You can read both a local file and a remote file.
 * **There is some issue printing headers and footers...**
+	* UPDATE: Chrome (and Firefox) do not support a lot of CSS printing features, such as "running" elements. :(
 
 ## Install from source
 
